@@ -23,10 +23,10 @@ export class AppComponent {
   saveData($event: any) {
     const newCostumer = {
       costumer: {
-        city: $event.CUSTOMER.CITY,
-        street: $event.CUSTOMER.STREET,
-        name: $event.CUSTOMER.FIRSTNAME,
-        lastName: $event.CUSTOMER.LASTNAME
+        city: $event['CUSTOMER']['CITY'],
+        street: $event['CUSTOMER']['STREET'],
+        name: $event['CUSTOMER']['FIRSTNAME'],
+        lastName: $event['CUSTOMER']['LASTNAME']
       },
     };
     this.data.push(JSON.stringify(newCostumer));

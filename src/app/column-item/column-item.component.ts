@@ -47,10 +47,10 @@ export class ColumnItemComponent implements OnInit {
     const parser = new DOMParser();
     const xml = parser.parseFromString(this.result, 'text/xml');
     const obj = this.ngxXml2jsonService.xmlToJson(xml);
-    this.city = obj.CUSTOMER.CITY;
-    this.street = obj.CUSTOMER.STREET;
-    this.name = obj.CUSTOMER.FIRSTNAME;
-    this.lastName = obj.CUSTOMER.LASTNAME;
+    this.city = obj['CUSTOMER']['CITY'];
+    this.street = obj['CUSTOMER']['STREET'];
+    this.name = obj['CUSTOMER']['FIRSTNAME'];
+    this.lastName = obj['CUSTOMER']['LASTNAME'];
 
     this.dataEmitter.emit(obj);
 
